@@ -17,8 +17,8 @@ var reverseFirstLast = function(sentence){
 
 }
 
-document.write(reverseFirstLast(sentence));
-document.write("<br>");
+// document.write(reverseFirstLast(sentence));
+// document.write("<br>");
 
 // add the result from reverseFirstLast to the original sentence
 var addFirstLast = function(sentence){
@@ -26,8 +26,8 @@ var addFirstLast = function(sentence){
   return sentence + firstLast;
 }
 
-document.write(addFirstLast(sentence));
-document.write("<br>");
+// document.write(addFirstLast(sentence));
+// document.write("<br>");
 
 
 // add fourth function to count letters and print middle letters
@@ -38,7 +38,7 @@ var middleLetter = function(sentence) {
   var y = Math.floor(x);
   return sentence[y] + addFirstLast(sentence);
 };
-alert(middleLetter(sentence));
+// alert(middleLetter(sentence));
 
 
 //reverse a sentence
@@ -50,14 +50,26 @@ var myReverse = function(sentence){
   return reverseString;
 }
 
-document.write(myReverse(middleLetter(sentence)));
+// document.write(myReverse(middleLetter(sentence)));
 
 
 $(function(){
   $("#wal1").click(function() {
-    alert(sentence);
+    // alert(sentence);
+    $("#wal2").css( "display", "none");
+    $("#wal1").css( "display", "none");
+    $("#wal2").css( "display", "block");
+
+
   });
   $("#wal2").click(function() {
-    alert(myReverse(middleLetter(sentence)));
+    // alert(myReverse(middleLetter(sentence)));
+    $("#wal1").css( "display", "none");
+    $("#wal2").css( "display", "none");
+    $("#wal1").css( "display", "block");
+
+
+
+
   });
 });
