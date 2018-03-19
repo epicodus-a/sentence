@@ -26,3 +26,28 @@ var addFirstLast = function(sentence){
 }
 
 document.write(addFirstLast(sentence));
+document.write("<br>");
+
+
+// add fourth function to count letters and print middle letters
+
+var middleLetter = function(sentence) {
+  var n = sentence.length;
+  var x =n/2
+  var y = Math.floor(x);
+  return sentence[y] + addFirstLast(sentence);
+};
+alert(middleLetter(sentence));
+
+
+//reverse a sentence
+var myReverse = function(sentence){
+  var reverseString = "";
+  for (var i = sentence.length - 1; i > 0; i -- ){
+    reverseString += sentence[i];
+  }
+  return reverseString;
+}
+
+document.write(myReverse(middleLetter(sentence)));
+document.write("<br>");
