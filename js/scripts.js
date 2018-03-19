@@ -1,3 +1,4 @@
+
 var sentence = prompt("Please enter a sentence: ");
 console.log(sentence);
 
@@ -50,4 +51,13 @@ var myReverse = function(sentence){
 }
 
 document.write(myReverse(middleLetter(sentence)));
-document.write("<br>");
+
+
+$(function(){
+  $("#wal1").click(function() {
+    alert(sentence);
+  });
+  $("#wal2").click(function() {
+    alert(myReverse(middleLetter(sentence)));
+  });
+});
